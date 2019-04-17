@@ -58,6 +58,7 @@ return [
             'templates' => [APP . 'Template' . DS],
             'locales' => [APP . 'Locale' . DS],
         ],
+        'emlPath' => WWW_ROOT . 'input' . DS,
     ],
 
     /**
