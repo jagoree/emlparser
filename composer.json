@@ -1,0 +1,13 @@
+{
+    "require": {
+        "vaibhavpandeyvpz/phemail": "^1.0",
+        "cakephp/cakephp": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require-dev": {
+    }
+}
