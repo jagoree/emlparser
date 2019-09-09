@@ -1,5 +1,10 @@
 # emlparser  
-Установка:  
+Парсер писем в EML-формате в БД MySQL
+## Требования
+PHP7.0 и выше  
+MySQL 5.5 и выше
+
+## Установка:  
 ```
 git clone https://github.com/jagoree/emlparser.git  
 ```
@@ -7,8 +12,21 @@ git clone https://github.com/jagoree/emlparser.git
 ```
 config/app.php  
 ```
-раздел `Datasources`  
-Файл нужно скачать отдельно.  
+секция `Datasources`
+
+Начальный дамп БД
+```
+config/schema/projects-production.sql
+```
+Архив для проверки:
+```
+tmp/mailparsing.zip
+```
+Установить права 777 на папки
+```
+tmp
+logs
+```
 Например, вирутальный хост **parser.local**  
-открываем в браузере http://parser.local, через форму добавляем файл архива, нажимаем "Загрузить".  
+Открываем в браузере http://parser.local, через форму добавляем файл архива, нажимаем "Загрузить".  
 В случае успешного импорта покажет, сколько добавлено проектов, пользователей, постов.
