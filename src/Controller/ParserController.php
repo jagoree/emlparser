@@ -38,7 +38,7 @@ class ParserController extends AppController
 
     public function index()
     {
-        $path = $this->check_dir();
+        $path = $this->checkDir();
         if ($this->getRequest()->is('post')) {
             if (!$filename = $this->unzip($path)) {
                 return $this->redirect('/');
@@ -150,7 +150,7 @@ class ParserController extends AppController
         return ['author_id' => $users[$_name], 'project_id' => $projects[$_project]['id'], 'created_at' => $ts, 'updated_at' => $ts, 'body' => implode('', $post), 'users_to_post' => $projects[$_project]['users']];
     }
 
-    private function check_dir()
+    private function checkDir()
     {
         $path = TMP . 'emls' . DS;
         if (!is_dir($path)) {
@@ -162,7 +162,7 @@ class ParserController extends AppController
     private function unzip($dst_dir)
     {
         
-        if (!$this->check_file()) {
+        if (!$this->checkFile()) {
             return false;
         }
         $zip = new \ZipArchive();
@@ -181,7 +181,7 @@ class ParserController extends AppController
         return $filename;
     }
 
-    private function check_file()
+    private function checkFile()
     {
         if (!$tmp_file = $this->getRequest()->getData('file.tmp_name')) {
             $this->Flash->set('Файл не загружен!', ['element' => 'error']);
