@@ -1,5 +1,9 @@
 {
     "require": {
+<<<<<<< HEAD
+=======
+        "php": "^7.0",
+>>>>>>> 587a7c9922b40ca88381c4d6076e1c24d1450d37
         "vaibhavpandeyvpz/phemail": "^1.0",
         "cakephp/cakephp": "^3.7"
     },
